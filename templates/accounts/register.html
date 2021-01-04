@@ -1,5 +1,5 @@
 {%extends 'base.html'%}
-
+{%block title %} | Register Account {%endblock%}
 {%block content%}
 <section id="register" class="bg-light py-5">
     <div class="container">
@@ -11,6 +11,7 @@
                 <i class="fas fa-user-plus"></i> Register</h4>
             </div>
             <div class="card-body">
+                {%include 'partials/_alerts.html'%}
                 <form action="{% url 'register' %}" method="POST">
                    {% csrf_token %}
                   <div class="form-group">
